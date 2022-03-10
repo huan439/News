@@ -1,0 +1,113 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Project 4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+    <div id="topbar">My News <span data-toggle="modal" data-target="#myModal">&#x1F50E;&#xFE0E;</span></div>
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <form>
+                            <div>
+                                <label for="keyWords">Keywords:</label>
+                                <input type="text" id="keyWords" name="keyWords">
+                            </div>
+                            <div>
+                                <label for="language">Select Language:</label>
+                                <select name="language" id="language">
+                                    <option value="any">Any</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="zh">Chinese</option>
+                                    <option value="nl">Dutch</option>
+                                    <option value="de">German</option>
+                                    <option value="en">English</option>
+                                    <option value="fr">French</option>
+                                    <option value="he">Hebrew</option>
+                                    <option value="hi">Hindi</option>
+                                    <option value="it">Italian</option>
+                                    <option value="ja">Japanese</option>
+                                    <option value="ml">Malayalam</option>
+                                    <option value="pt">Portuguese</option>
+                                    <option value="ru">Russia</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="sv">Swedish</option>
+                                    <option value="uk">Ukrainian</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="region">Region:</label>
+                                <select name="region" id="region">
+                                    <option value="any">Any</option>
+                                    <option value="au">Australia</option>
+                                    <option value="br">Brazil</option>
+                                    <option value="ca">Canada</option>
+                                    <option value="cn">China</option>
+                                    <option value="de">Germany</option>
+                                    <option value="eg">Egypt</option>
+                                    <option value="fr">France</option>
+                                    <option value="gr">Greece</option>
+                                    <option value="hk">Hong Kong</option>
+                                    <option value="in">India</option>
+                                    <option value="ie">Ireland</option>
+                                    <option value="il">Israel</option>
+                                    <option value="it">Italy</option>
+                                    <option value="jp">Japan</option>
+                                    <option value="nl">Netherlands</option>
+                                    <option value="no">Norway</option>
+                                    <option value="ph">Philippines</option>
+                                    <option value="sg">Singapore</option>
+                                    <option value="se">Sweden</option>
+                                    <option value="es">Spain</option>
+                                    <option value="ch">Switzerland</option>
+                                    <option value="gb">United Kingdom</option>
+                                    <option value="us">United States</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="time">Last update:</label>
+                                <select name="time" id="time">
+                                    <option value="0">Any time</option>
+                                    <option value="1">Past 24 hours</option>
+                                    <option value="7">Past week</option>
+                                    <option value="30">Past month</option>
+                                    <option value="365">Past year</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="sort">Sort by:</label>
+                                <select name="sort" id="sort">
+                                    <option value="publishedAt">Time</option>
+                                    <option value="relevance">Relevance</option>
+                                </select>
+                            </div>
+                            <br>
+                            <button type="button" id="search">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main"></div>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <div id="load"></div>
+</body>
+</html>
